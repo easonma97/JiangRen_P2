@@ -1,0 +1,5 @@
+.contenderForSpecificationBlock {
+    display: flex;
+    flex-flow: column;
+    padding-top: 10px;
+}

@@ -1,0 +1,9 @@
+.containerForWeatherFutureBlock{
+    display: flex;
+    flex-flow: column;
+    background-color: crimson;
+}
+
+.containerForTempatureBlock {
+    display: flex;
+}

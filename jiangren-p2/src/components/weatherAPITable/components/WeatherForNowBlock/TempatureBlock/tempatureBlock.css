@@ -1,0 +1,15 @@
+.containerBoxForTempatureBlock {
+    min-width: 100px;
+    min-height: 100px;
+    background-color:aquamarine;
+}
+
+.upperPart h1{
+    margin-bottom: 10px;
+    padding-left: 10px;
+}
+
+.lowerPart {
+    display: flex;
+    justify-content: center;
+}
