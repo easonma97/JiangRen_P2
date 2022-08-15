@@ -1,18 +1,28 @@
 import React from "react";
-import "./weatherBlock.css";
+import styled from "styled-components";
+
+const ContainerForWeatherFutureBlock = styled.div`
+    display: flex;
+    flex-flow: column;
+    background-color: crimson;
+`;
+
+const ContainerForTempatureBlock = styled.div`
+     display: flex;
+`;
 
 class WeatherForFutureBlock extends React.Component{
     render(){
         return(
-            <div className="containerForWeatherFutureBlock">
+            <ContainerForWeatherFutureBlock>
                 <p>TODAY</p>
-                <div className="containerForTempatureBlock">
+                <ContainerForTempatureBlock>
                     <p>20</p>
                     <p>/</p>
                     <p>25</p>
-                </div>
+                </ContainerForTempatureBlock>
                 <p>TODAY</p>
-            </div>
+            </ContainerForWeatherFutureBlock>
         );
     }
 }

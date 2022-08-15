@@ -1,10 +1,16 @@
 import React from "react";
-import "./responseBox.css";
+import styled from "styled-components";
+
+const Response = styled.p`
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding-top: 5px;
+`;
 
 class ResponseBox extends React.Component {
     render() {
         return(
-            <p>Response according to the input.</p>
+            <Response>Response according to the input.</Response>
         );
     }
 }

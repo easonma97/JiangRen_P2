@@ -1,9 +1,15 @@
 import React from "react";
-import './weatherAPITable.css';
+import styled from "styled-components";
 import SearchBar from "./components/SearchBar";
 import WeatherForNowBlock from "./components/WeatherForNowBlock";
 import WeatherForFutureBlock from "./components/WeatherForFutureBlock";
 import CheckBox from "./components/CheckBox";
+
+const Wrapper = styled.div`
+    min-width: 300px;
+    min-height: 300px;
+    background-color: burlywood;
+`;
 
 class WeatherAPITable extends React.Component {
     constructor(props) {
@@ -11,18 +17,24 @@ class WeatherAPITable extends React.Component {
         this.state = {
             country: '',
             isCelsius: false,
-            isRespond: false
         };
+        this.handleRespond = this.handleRespond.bind(this);
     }
     
+    handleRespond (country) {
+        this.setState({
+            country: country
+        });
+    }
+
     render(){
         return (
-            <div className="container-box">
-                <SearchBar country={this.state.country} isRespond={this.state.isRespond}/>
+            <Wrapper>
+                <SearchBar country={this.state.country} handleRespond={this.handleRespond}/>
                 <WeatherForNowBlock forecast={this.props.data} isCelsius={this.state.isCelsius}/>
                 <WeatherForFutureBlock forecast={this.props.data} isCelsius={this.state.isCelsius}/>
                 <CheckBox isCelsius={this.state.isCelsius}/>
-            </div>
+            </Wrapper>
         );
     }
 }

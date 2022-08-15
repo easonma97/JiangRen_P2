@@ -1,6 +1,12 @@
 import React from "react";
+import styled from "styled-components";
 import Item from "./components/itemBlock";
-import "./specificationBlock.css";
+
+const ContainerForSpecificationBlock = styled.div`
+    display: flex;
+    flex-flow: column;
+    padding-top: 10px;   
+`;
 
 class SpecificationBlock extends React.Component{
     render(){
@@ -25,9 +31,9 @@ class SpecificationBlock extends React.Component{
             key={3}
         />);
         return (
-            <div className="contenderForSpecificationBlock">
+            <ContainerForSpecificationBlock>
                 {rows}
-            </div>
+            </ContainerForSpecificationBlock>
         );
     }
 }

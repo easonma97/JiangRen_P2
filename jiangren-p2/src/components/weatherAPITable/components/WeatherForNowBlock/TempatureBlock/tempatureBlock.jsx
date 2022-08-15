@@ -1,5 +1,21 @@
 import React from "react";
-import "./tempatureBlock.css";
+import styled from "styled-components";
+
+const ContainerForTempatureBlock = styled.div`
+    min-width: 100px;
+    min-height: 100px;
+    background-color:aquamarine;
+`;
+
+const H1 = styled.h1`
+    margin-bottom: 10px;
+    padding-left: 10px;  
+`;
+
+const LowerPart = styled.div`
+    display: flex;
+    justify-content: center;
+`;
 
 class TempatureBlock extends React.Component {
     render() {
@@ -7,16 +23,14 @@ class TempatureBlock extends React.Component {
         const humid = this.props.forecast.current.humidity;
         const precip = this.props.forecast.current.precip_mm;
         return (
-            <div className="containerBoxForTempatureBlock">
-                <div className="upperPart">
-                    <h1>{temp}</h1>
-                </div>
-                <div className ="lowerPart">
+            <ContainerForTempatureBlock>
+                <H1>{temp}</H1>
+                <LowerPart>
                     <p>{humid}</p>
                     <p>/</p>
                     <p>{precip}</p>
-                </div>
-            </div>
+                </LowerPart>
+            </ContainerForTempatureBlock>
         );
     }
 }

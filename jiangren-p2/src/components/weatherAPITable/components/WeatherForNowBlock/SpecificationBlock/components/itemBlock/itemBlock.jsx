@@ -1,5 +1,15 @@
 import React from "react";
-import "./itemBlock.css";
+import styled from "styled-components";
+
+const ContainerBoxForItem = styled.div`
+    display: flex;
+    height: 35px;
+`;
+
+const Img = styled.img`
+    width: 35px;
+    height: 35px;    
+`;
 
 class Item extends React.Component{
     render(){
@@ -7,11 +17,11 @@ class Item extends React.Component{
         const number = this.props.number;
         const icon = this.props.icon;
         return (
-            <div className="containerBoxForItem">
-                <img src={weather_icon} alt="weather"/>
+            <ContainerBoxForItem>
+                <Img src={weather_icon} alt="weather"/>
                 <p>{number}</p>
                 <p>{icon}</p>
-            </div>
+            </ContainerBoxForItem>
         );
     }
 }

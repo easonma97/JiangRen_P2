@@ -1,15 +1,23 @@
 import React from 'react';
-import "./checkbox.css";
+import styled from 'styled-components';
+
+const ContainerForCheckBox = styled.div`
+    display: flex;
+    justify-content: center;
+`;
+
+const Input = styled.input`
+    width: 18px;
+`;
 
 class CheckBox extends React.Component{
     render(){
         const isCelsius = this.props.isCelsius;
         return(
-            <div className="containerForCheckBox">
-                <input type="checkbox" checked={isCelsius}></input>
-                
+            <ContainerForCheckBox>
+                <Input type="checkbox" checked={isCelsius}></Input>
                 <label>C/F</label>
-            </div>
+            </ContainerForCheckBox>
         );
     }
 }

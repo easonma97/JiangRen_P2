@@ -1,8 +1,0 @@
-.containerForCheckBox {
-    display: flex;
-    justify-content: center;
-}
-
-.containerForCheckBox input{
-    width: 18px;
-}
